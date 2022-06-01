@@ -1,5 +1,5 @@
 
 <div class="vh-100">
-    <app-navbar (action)="logout()"></app-navbar>
+    <app-navbar *ngIf="signedIn" (action)="logout()"></app-navbar>
     <router-outlet></router-outlet>
 </div>

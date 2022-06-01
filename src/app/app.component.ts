@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AuthService } from './core/services/auth.service';
 
 @Component({
@@ -8,7 +9,17 @@ import { AuthService } from './core/services/auth.service';
 })
 export class AppComponent {
   title = 'resource-management-system';
-  constructor(private authService: AuthService){}
+  signedIn = false;
+  constructor(private authService: AuthService, private afAuth: AngularFireAuth){
+    this.afAuth.authState.subscribe((user) => {
+      if (user) {
+        this.signedIn = true;
+      } else {
+        this.signedIn = false;
+
+      }
+    });
+  }
 
   logout() {
     this.authService.signOut();
