@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+/* toastr css */
+@import '~ngx-toastr/toastr';
+
+body, html {
+    margin: 0;
+}
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.h-custom {
+    height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+    height: 100%;
+}
+}
+
+.card.safe {
+    border-left-color: #54d5bd;
+    border-left-width: 10px;
+
+}
+
+.card.warn {
+    border-left-color: #d5c654;
+    border-left-width: 10px;
+
+}
+
+.card.out {
+    border-left-color: #d55454;
+    border-left-width: 10px;
+
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+  }

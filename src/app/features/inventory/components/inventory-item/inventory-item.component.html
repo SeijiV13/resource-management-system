@@ -1,0 +1,14 @@
+
+<div class="card" 
+[class.safe]="inventory && inventory.quantity > 10"
+[class.warn]="inventory && (inventory.quantity <= 10 && inventory.quantity >=1)"
+[class.out]="inventory && (inventory.quantity === 0)"
+>
+    <div class="card-body">
+        <h5 class="card-title">{{inventory?.name}}</h5>
+        <p class="card-text">{{inventory?.description}}</p>
+        <p><b>Quantity: {{inventory?.quantity}}</b></p>
+        <ng-content select="[buttons]"></ng-content>
+        
+     </div>
+</div>

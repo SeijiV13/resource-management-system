@@ -1,0 +1,34 @@
+
+<div class="app" style="display: flex; height: 92vh; overflow:scroll initial">
+    <CDBSidebar textColor="#ffffff" backgroundColor="#333333">
+        <CDBSidebarHeader [prefix]="icon" >
+            <ng-template #icon>
+                <i class="fa fa-bars fa-large"></i>
+            </ng-template>
+            Menu 
+        </CDBSidebarHeader>
+
+        <CDBSidebarContent>
+            <CDBSidebarMenu class="sidebar-content">
+                <CDBSidebarMenuItem link='/home' icon="columns">
+                    <i-bs name="laptop"></i-bs> Resources                 
+                </CDBSidebarMenuItem>               
+                <CDBSidebarMenuItem link='/history' icon="table" >
+                    <i-bs name="envelope-paper-fill"></i-bs> Transaction History                  
+                </CDBSidebarMenuItem>                                      
+            </CDBSidebarMenu>
+        </CDBSidebarContent>
+        <div class="mt-auto">
+
+            <CDBSidebarFooter style="text-align: center; margin-top: auto;">
+                <div class="sidebar-btn-wrapper" style="padding: 20px 5px">
+                    RMS 2022
+                </div>
+            </CDBSidebarFooter>
+        </div>
+    </CDBSidebar>
+    <div class="container">
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>
