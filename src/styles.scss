@@ -47,6 +47,11 @@ body, html {
 
 }
 
+.card.history {
+  border-left-color:rgb(9, 118, 168);
+  border-left-width: 10px;
+}
+
 .container::-webkit-scrollbar {
     display: none;
   }

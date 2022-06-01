@@ -1,0 +1,12 @@
+
+<div class="card history" 
+>
+    <div class="card-body">
+        <h5 class="card-title">{{history?.name}}</h5>
+        <p class="card-text">{{history?.description}}</p>
+        <p><b>Done by: {{history?.transactionBy}}</b></p>
+        <p><b>Done by: {{history?.transactionDate}}</b></p>
+        <ng-content select="[buttons]"></ng-content>
+        
+     </div>
+</div>

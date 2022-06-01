@@ -1,1 +1,4 @@
-<p>inventory-history works!</p>
+<app-page-title [title]="'Transaction History'"></app-page-title>
+<app-inventory-history-item *ngFor="let data of history" [history]="data">
+</app-inventory-history-item>
+<app-loader *ngIf="loading"></app-loader>

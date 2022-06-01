@@ -14,3 +14,4 @@
     </div>
 </app-inventory-item>
 <app-inventory-canvas #invCanvas (action)="emitAction($event)"></app-inventory-canvas>
+<app-loader *ngIf="loading"></app-loader>

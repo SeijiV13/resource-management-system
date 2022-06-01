@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environments/environment';
 import { InventoryCanvasComponent } from './components/inventory-canvas/inventory-canvas.component';
+import { InventoryHistoryItemComponent } from './components/inventory-history-item/inventory-history-item.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { InventoryCanvasComponent } from './components/inventory-canvas/inventor
     InventoryBaseComponent,
     InventoryActionBarComponent,
     InventoryCanvasComponent,
+    InventoryHistoryItemComponent,
   ],
   imports: [
     CommonModule,

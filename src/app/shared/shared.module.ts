@@ -5,7 +5,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
-import { laptop, plusCircle, plus, trash, penFill, envelopePaperFill} from 'ngx-bootstrap-icons';
+import { laptop, plusCircle, plus, trash, penFill, envelopePaperFill, doorOpenFill} from 'ngx-bootstrap-icons';
+import { LoaderComponent } from './layout/loader/loader.component';
 // Select some icons (use an object, not an array)
 const icons = {
   laptop,
@@ -13,13 +14,15 @@ const icons = {
   plus,
   trash,
   penFill,
-  envelopePaperFill
+  envelopePaperFill,
+  doorOpenFill
 };
 @NgModule({
   declarations: [
     FooterComponent, 
     NavbarComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +32,8 @@ const icons = {
     FooterComponent,
     NavbarComponent,
     PageTitleComponent,
-    NgxBootstrapIconsModule
+    NgxBootstrapIconsModule,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

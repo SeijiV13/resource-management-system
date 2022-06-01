@@ -12,6 +12,7 @@ import { InventoryService } from '../../services/inventory.service';
 export class InventoryListComponent implements OnInit {
   @ViewChild('invCanvas') invCanvas: InventoryCanvasComponent | undefined;
   inventories: Array<Inventory> = [];
+  loading = true;
   constructor(private inventoryService: InventoryService, 
     private toastr: ToastrService) { 
   }
@@ -28,6 +29,7 @@ export class InventoryListComponent implements OnInit {
         (a as any)['$key'] = item.key;
         this.inventories.push(a as Inventory);
       })
+      this.loading = false;
     })
   }
 
@@ -41,10 +43,12 @@ export class InventoryListComponent implements OnInit {
       }
       case 'update': {
         this.inventoryService.updateInventory(event.value);
+        this.toastr.success(`Updated resource ${event.value.name}`, "Update Success")
         return;
       }
       case 'delete': {
-        this.inventoryService.deleteInventory(event.value.$key);
+        this.inventoryService.deleteInventory(event.value);
+        this.toastr.success(`Deleted resource ${event.value.name}`, "Deletion Success")
         return;
       }
       case 'update-canvasopen': {
@@ -56,7 +60,7 @@ export class InventoryListComponent implements OnInit {
       }
       default:
         this.inventoryService.addInventory(event.value);
-        this.toastr.success(`Added a new Resource ${event.value.name}`, "Success")
+        this.toastr.success(`Added a new resource ${event.value.name}`, "Creation Success")
     }
 
   }
