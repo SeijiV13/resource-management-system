@@ -56,7 +56,7 @@ export class AuthService {
       .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
-        this.sendVerificationMail();
+        // this.sendVerificationMail();
         this.setUserData(result.user);
       })
       .catch((error) => {

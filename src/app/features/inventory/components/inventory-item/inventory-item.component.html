@@ -8,6 +8,7 @@
         <h5 class="card-title">{{inventory?.name}}</h5>
         <p class="card-text">{{inventory?.description}}</p>
         <p><b>Quantity: {{inventory?.quantity}}</b></p>
+        <!-- content projection -->
         <ng-content select="[buttons]"></ng-content>
         
      </div>
